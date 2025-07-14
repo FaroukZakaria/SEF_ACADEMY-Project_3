@@ -1,0 +1,345 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+a {
+    text-decoration: none;
+    color: black;
+}
+a:active {
+    text-decoration: none;
+    color: black;
+}
+ul {
+    list-style: none;
+}
+li {
+    list-style: none;
+}
+.nav-bg {
+    height: 86px;
+}
+.nav-link-dropdown {
+    border: 1px solid #0dcaf0;
+    box-shadow: 1px 1px 1px 0 #0dcaf0;
+    border-radius: 0.5rem;
+}
+.nav-link-dropdown:hover::first-letter {
+    text-decoration: underline;
+    color:blueviolet;
+    text-shadow: 0 0 5px blueviolet;
+    font-weight: bold;
+    font-size: 1.1em;
+}
+.social-icon:hover i {
+    color: #55d7f1;
+}
+
+@media screen and (max-width: 767px) {
+    .carousel-section {
+        height: 700px;
+    }
+    .carousel-inner {
+        height: 100%;
+    }
+    .carousel-item {
+        height: 100%;
+    }
+    .carousel-item img {
+        height: 100%;
+    }
+}
+
+
+.accordion-item {
+    box-shadow: none;
+    background-color: transparent;
+}
+.accordion-item button {
+    box-shadow: none;
+    background-color: transparent;
+}
+.accordion-item button:focus {
+    box-shadow: none;
+    border: none;
+    background-color: transparent;
+}
+.translate {
+    background-color: rgb(145, 202, 202);
+    border: 1px solid rgba(0,0,0,0.1);
+    box-shadow: var(--bs-box-shadow) !important;
+}
+.translate button:hover {
+    background-color: gray;
+}
+.popular-destinations-img {
+    width: 100%;
+    height: 300px;
+    background-image: url(../images/cairo.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+.bg-aqua {
+    background-color: rgb(145, 202, 202) !important;
+}
+
+.card-img,
+.thanks-card-img {
+    height: 500px;
+    background-image: url(../images/cairo.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    cursor: pointer;
+}
+.thanks-card-img {
+    position: relative;
+    transition: 0.3s ease-in-out;
+}
+.card::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 0;
+    background-color: rgba(13, 202, 240, 0.25);
+    z-index: 0;
+    pointer-events: none;
+    transition: 0.5s ease-in-out;
+}
+.card:hover::before {
+    width: 100%;
+    height: 100%;
+    transition: 0.5s ease-in-out;
+}
+.card::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 0;
+    height: 0;
+    background-color: rgba(13, 202, 240, 0.25);
+    z-index: 0;
+    pointer-events: none;
+    transition: 0.5s ease-in-out;
+}
+.card:hover::after {
+    width: 100%;
+    height: 100%;
+    transition: 0.5s ease-in-out;
+}
+
+.thanks-cards-container {
+    width: 95%;
+    margin-left: auto;
+    margin-right: auto;
+}
+@media screen and (max-width: 767px) {
+    .thanks-cards-container {
+        width: 50%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .thanks-card-img-mini {
+        width: 50% !important;
+    }
+}
+.thanks-card-img::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to bottom, rgba(128,128,128,0.7), transparent);
+    background-color: rgba(59, 59, 59, 0.7);
+    border-radius: var(--bs-border-radius-xxl) !important;
+    z-index: 1;
+    pointer-events: none;
+}
+.thanks-card-parent:hover .thanks-card-img::before {
+    background: linear-gradient(to bottom, rgba(0,0,128,0.7), transparent);
+    background-color: rgba(59, 59, 59, 0.7);
+}
+.thanks-card-parent:hover .thanks-card-img {
+    transform: scale(0.9);
+    transition: 0.3s ease-in-out;
+}
+.thanks-card-img-mini {
+    width: 25%;
+    height: 100px;
+    border-radius: 50%;
+    border: 1px solid #fff;
+    background-image: url(../images/cairo.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    cursor: pointer;
+}
+
+.w-90 {
+    width: 90% !important;
+}
+
+@media screen and (min-width: 768px) {
+    .w-90-md {
+        width: 90% !important;
+    }
+}
+.podcast-news-item {
+    box-shadow: 0 0 30px 10px skyblue;
+    display: flex;
+    flex-direction: row-reverse;
+    height: 600px;
+    overflow: hidden;
+}
+.podcast-news-item-details-btns button:last-child:hover {
+    color: white !important;
+    background-color: #0dcaf0;
+    border: 1px solid #0dcaf0;
+}
+.podcast-news-item-details-btns button:not(:last-child):hover {
+    cursor: default;
+}
+.podcast-news-item-img-wrapper {
+    width: 100%;
+    height: auto;
+}
+.podcast-news-item-img-wrapper img {
+    width: 100%;
+    height: 100%;
+    border-radius: 0.5rem;
+    transition: 0.3s ease-in-out;
+}
+.podcast-news-item-progress {
+    width: 25%;
+    height: 5px;
+    transition: 0.3s ease-in-out;
+}
+.podcast-news-item:hover .podcast-news-item-progress {
+    width: 50%;
+    transition: 0.3s ease-in-out;
+}
+.podcast-news-item:nth-child(2) .podcast-news-item-details-btns button:hover:last-child {
+    background-color: red !important;
+    border: 1px solid red !important;
+}
+.podcast-news-item:nth-child(2) .podcast-news-item-progress div {
+    background-color: red;
+}
+.podcast-news-item:nth-child(3) .podcast-news-item-details-btns button:hover:last-child {
+    background-color: green !important;
+    border: 1px solid green !important;
+}
+.podcast-news-item:nth-child(3) .podcast-news-item-progress div {
+    background-color: green;
+}
+.podcast-news-item:nth-child(4) .podcast-news-item-details-btns button:hover:last-child {
+    background-color: yellowgreen !important;
+    border: 1px solid yellowgreen !important;
+}
+.podcast-news-item:nth-child(4) .podcast-news-item-progress div {
+    background-color: yellowgreen;
+}
+@media screen and (min-width: 992px) {
+    .podcast-news-item {
+        height: auto;
+        overflow: none;
+    }
+    .podcast-news-item-img-wrapper {
+        width: 100%;
+        height: auto;
+        overflow: hidden;
+        transform-origin: top right;
+        transform: skewX(5deg);
+    }
+    .podcast-news-item-img-wrapper img {
+        width: 100%;
+        height: 100%;
+        transform: skewX(-5deg);
+        transform-origin: top right;
+        border-radius: 0.5rem;
+        border-top-left-radius: 0;
+        border-bottom-left-radius: 0;
+        transition: 0.3s ease-in-out;
+    }
+    .podcast-news-item:nth-child(even) .podcast-news-item-img-wrapper {
+        overflow: hidden;
+        transform: skewX(-5deg);
+        transform-origin: top left;
+        transition: 0.3s ease-in-out;
+    }
+    .podcast-news-item:nth-child(even) .podcast-news-item-img-wrapper img {
+        transform: skewX(5deg);
+        transform-origin: top left;
+        border-top-left-radius: 0.5rem;
+        border-bottom-left-radius: 0.5rem;
+        border-top-right-radius: 0;
+        border-bottom-right-radius: 0;
+        transition: 0.3s ease-in-out;
+    }
+    .podcast-news-item:nth-child(even):hover img {
+        transform: skewX(5deg) scale(1.1);
+        transform-origin: top left;
+        transition: 0.3s ease-in-out;
+    }
+    .podcast-news-item:hover img {
+        transform: skewX(-5deg) scale(1.1);
+        transform-origin: top right;
+        transition: 0.3s ease-in-out;
+    }
+    .podcast-news-item-progress {
+        width: 10%;
+        height: 3%;
+        transition: 0.3s ease-in-out;
+    }
+    .podcast-news-item:hover .podcast-news-item-progress {
+        width: 20%;
+        transition: 0.3s ease-in-out;
+    }
+}
+
+.shadow-blue {
+    box-shadow: 0 0 20px 10px rgba(135, 206, 235, 0.6);
+}
+.social-media-card {
+    box-shadow: 0 0 30px 10px skyblue;
+}
+.social-media-card h3 {
+    height: 50px;
+}
+.social-media-card-img {
+    width: 80px;
+    height: 80px;
+    cursor: pointer;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    background-image: url(../images/cairo.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    border-radius: 1rem;
+    transition: 0.3s ease-in-out;
+}
+
+.footer-details-item:nth-child(2) a {
+    color: #000 !important;
+    transition: 0.1s ease-in-out;
+}
+.footer-details-item:nth-child(2) a:hover {
+    color: gray !important;
+    transition: 0.1s ease-in-out;
+}
+.footer-details-item:not(:nth-child(2)) a {
+    color: #fff !important;
+    transition: 0.1s ease-in-out;
+}
+.footer-details-item:not(:nth-child(2)) a:hover {
+    color: #000 !important;
+    transition: 0.1s ease-in-out;
+}
