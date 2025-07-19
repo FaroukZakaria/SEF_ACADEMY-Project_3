@@ -17,6 +17,15 @@ ul {
 li {
     list-style: none;
 }
+.colorful-text {
+    text-transform: uppercase;
+    background: linear-gradient(to bottom, rgb(181, 20, 255), rgb(57, 57, 255));
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight: 1000;
+    font-size: 24px;
+}
 .nav-bg {
     height: 86px;
 }
@@ -38,17 +47,23 @@ li {
 
 @media screen and (max-width: 767px) {
     .carousel-section {
-        height: 700px;
+        height: 700px !important;
     }
     .carousel-inner {
-        height: 100%;
+        height: 100% !important;
     }
     .carousel-item {
-        height: 100%;
+        height: 100% !important;
     }
     .carousel-item img {
-        height: 100%;
+        height: 100% !important;
     }
+}
+
+.welcome-container button:hover {
+    background-color: gray !important;
+    color: white !important;
+    border: 1px solid gray !important;
 }
 
 
@@ -76,12 +91,18 @@ li {
 .popular-destinations-img {
     width: 100%;
     height: 300px;
-    background-image: url(../images/cairo.jpg);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
     background-attachment: fixed;
 }
+.popular-destinations-container .popular-destinations-img {
+    background-image: url(../images/egypt.webp);
+}
+section .popular-destinations-img {
+    background-image: url(../images/sharm3.jpg);
+}
+
 .bg-aqua {
     background-color: rgb(145, 202, 202) !important;
 }
@@ -89,12 +110,55 @@ li {
 .card-img,
 .thanks-card-img {
     height: 500px;
-    background-image: url(../images/cairo.jpg);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
     cursor: pointer;
 }
+.cards-container > div:nth-child(1) > div:nth-child(1) .card-img {
+    background-image: url(../images/cairo.avif);
+}
+.cards-container > div:nth-child(1) > div:nth-child(2) .card-img {
+    background-image: url(../images/alex.jpg);
+}
+.cards-container > div:nth-child(1) > div:nth-child(3) .card-img {
+    background-image: url(../images/luxor.jpg);
+}
+.cards-container > div:nth-child(1) > div:nth-child(4) .card-img {
+    background-image: url(../images/aswan.jpg);
+}
+.cards-container > div:nth-child(1) > div:nth-child(5) .card-img {
+    background-image: url(../images/new-capital.jpg);
+}
+.cards-container > div:nth-child(1) > div:nth-child(6) .card-img {
+    background-image: url(../images/sharm2.jpg);
+}
+.cards-container > div:nth-child(2) > div:nth-child(1) .card-img {
+    background-image: url(../images/siwa.jpg);
+}
+.cards-container > div:nth-child(2) > div:nth-child(2) .card-img {
+    background-image: url(../images/hurghada.jpg);
+}
+
+.thanks-cards-container > div:nth-child(1) .thanks-card-img {
+    background-image: url(../images/farouk.jpg);
+}
+.thanks-cards-container > div:nth-child(1) .thanks-card-img-mini {
+    background-image: url(../images/farouk.jpg);
+}
+.thanks-cards-container > div:nth-child(2) .thanks-card-img {
+    background-image: url(../images/mahmoud.jpeg);
+}
+.thanks-cards-container > div:nth-child(2) .thanks-card-img-mini {
+    background-image: url(../images/mahmoud.jpeg);
+}
+.thanks-cards-container > div:nth-child(3) .thanks-card-img {
+    background-image: url(../images/mark.jpeg);
+}
+.thanks-cards-container > div:nth-child(3) .thanks-card-img-mini {
+    background-image: url(../images/mark.jpeg);
+}
+
 .thanks-card-img {
     position: relative;
     transition: 0.3s ease-in-out;
@@ -175,7 +239,6 @@ li {
     height: 100px;
     border-radius: 50%;
     border: 1px solid #fff;
-    background-image: url(../images/cairo.jpg);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -319,12 +382,24 @@ li {
     cursor: pointer;
     margin-top: 10px;
     margin-bottom: 10px;
-    background-image: url(../images/cairo.jpg);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
     border-radius: 1rem;
     transition: 0.3s ease-in-out;
+}
+
+.social-media-cards > div:nth-child(1) .social-media-card-img {
+    background-image: url(../images/twitter.webp);
+}
+.social-media-cards > div:nth-child(2) .social-media-card-img {
+    background-image: url(../images/whatsapp.webp);
+}
+.social-media-cards > div:nth-child(3) .social-media-card-img {
+    background-image: url(../images/linkedin.png);
+}
+.social-media-cards > div:nth-child(4) .social-media-card-img {
+    background-image: url(../images/instagram.png);
 }
 
 .footer-details-item:nth-child(2) a {
@@ -342,4 +417,24 @@ li {
 .footer-details-item:not(:nth-child(2)) a:hover {
     color: #000 !important;
     transition: 0.1s ease-in-out;
+}
+.footer-details-item-header-img {
+    width: 60px;
+    height: 60px;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    border-radius: 50%;
+}
+.footer-details > .footer-details-item:nth-child(1) .footer-details-item-header-img {
+    background-image: url(../images/logo.jpg);
+    box-shadow: 0 0 30px 10px skyblue;
+}
+.footer-details > .footer-details-item:nth-child(2) .footer-details-item-header-img {
+    background-image: url(../images/logo.jpg);
+    box-shadow: 0 0 30px 10px skyblue;
+}
+.footer-details > .footer-details-item:nth-child(3) .footer-details-item-header-img {
+    background-image: url(../images/logo.jpg);
+    box-shadow: 0 0 30px 10px skyblue;
 }
